@@ -43,7 +43,14 @@ with mp_pose.Pose(
     leftelbow = (results.pose_landmarks.landmark[13].x, results.pose_landmarks.landmark[13].y, results.pose_landmarks.landmark[13].z)
     leftwrist = (results.pose_landmarks.landmark[15].x, results.pose_landmarks.landmark[15].y, results.pose_landmarks.landmark[15].z)
     leftangle = getAngle(leftshoulder, leftelbow, leftwrist)
+    
+    rightshoulder = (results.pose_landmarks.landmark[12].x, results.pose_landmarks.landmark[12].y, results.pose_landmarks.landmark[12].z)
+    rightelbow = (results.pose_landmarks.landmark[14].x, results.pose_landmarks.landmark[14].y, results.pose_landmarks.landmark[14].z)
+    rightwrist = (results.pose_landmarks.landmark[16].x, results.pose_landmarks.landmark[16].y, results.pose_landmarks.landmark[16].z)
+    rightangle = getAngle(rightshoulder, rightelbow, rightwrist)
+    
     print(f"left elbow angle: {leftangle}")
+    print(f"right elbow angle: {rightangle}")
  
     image.flags.writeable = True
     image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR) #conversoin back to BGR
