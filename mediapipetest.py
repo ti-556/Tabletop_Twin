@@ -6,15 +6,15 @@ mp_drawing_styles = mp.solutions.drawing_styles #landmarking style
 mp_pose = mp.solutions.pose #pose detection model
  
 def getAngle(A, B, C):
-    AB = [B[0] - A[0], B[1] - A[1]]
-    BC = [C[0] - B[0], C[1] - B[1]]
+    AB = [B[0] - A[0], B[1] - A[1], B[2] - A[2]]
+    BC = [C[0] - B[0], C[1] - B[1], C[2] - B[2]]
 
     # Dot product
-    dot_product = AB[0]*BC[0] + AB[1]*BC[1]
+    dot_product = AB[0]*BC[0] + AB[1]*BC[1] + AB[2]*BC[2]
 
     # Magnitudes
-    magnitude_AB = math.sqrt(AB[0]**2 + AB[1]**2)
-    magnitude_BC = math.sqrt(BC[0]**2 + BC[1]**2)
+    magnitude_AB = math.sqrt(AB[0]**2 + AB[1]**2 + AB[2]**2)
+    magnitude_BC = math.sqrt(BC[0]**2 + BC[1]**2 + BC[2]**2)
 
     # Cosine of angle
     cos_angle = dot_product / (magnitude_AB * magnitude_BC)
