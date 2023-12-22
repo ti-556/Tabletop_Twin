@@ -20,7 +20,10 @@ pip install --upgrade --user mediapipe
  <br>Connection trhough two PC in the same wifi router
  <br>(If possible) conection through two PC in different wifi
  
-### Class Dec.10 2023
+### Dec.10 2023
 <br>Purchased 15 serial servos KRS3301 from 近藤科学
 <br>Made a rough ankle model
+
+### Dec. 22 2023
+<br>Made a first prototype of the robot using RCB-4 to test servo control and motion
 
