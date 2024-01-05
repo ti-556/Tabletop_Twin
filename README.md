@@ -26,4 +26,5 @@ pip install --upgrade --user mediapipe
 
 ### Dec. 22 2023
 <br>Made a first prototype of the robot using RCB-4 to test servo control and motion
+<br><img src="images/Midterm_FrontView.JPG" alt="Midterm Product (Front View)" width="500"/>
 
